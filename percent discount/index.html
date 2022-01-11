@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount or Addition calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 id="hh">
+        Calculator to discount or Add by percent
+    </h1>
+    <div class="container">
+        
+        <div class="center">
+            <label for="inser" id="insert">Insert Original value :</label><br>
+            <input type="number" id="orginal_num" placeholder="Original number"><br><br>
+            Insert percent: <br>
+            <input type="number" id="discount_num" placeholder="percent"><br><br>
+            <input type="button" value="Discount" onclick="calculate_discount()">
+            <input type="button" name="calculate" value="Add" onclick="calculate_add()">
+            <input type="button" name="clear" value="Clear" onclick="clearscreen()"><br><br>
+            <input type="text" id="result" placeholder="Result" disabled>
+        </div>
+    </div>
+    
+    
+<script>
+ function clearscreen(){
+    document.getElementById("orginal_num").value="";
+    document.getElementById("discount_num").value="";
+    document.getElementById("result").value="";
+    }
+    
+    function calculate_add(){
+        var originalval=parseFloat(document.getElementById("orginal_num").value);
+        var discountval=parseFloat(document.getElementById("discount_num").value);
+       var discount= discountval/100;
+        discount=discount*originalval;
+        var result =originalval+discount;
+        document.getElementById("result").value=result;
+    }
+    function calculate_discount(){
+        var originalval=parseFloat(document.getElementById("orginal_num").value);
+        var discountval=parseFloat(document.getElementById("discount_num").value);
+       var discount= discountval/100;
+        discount=discount*originalval;
+        var result =originalval-discount;
+        document.getElementById("result").value=result;
+    }
+</script>
+</body>
+</html>
