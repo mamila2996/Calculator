@@ -1,0 +1,46 @@
+body{
+    background-color: lavender;
+}
+#hh{
+text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    display: block;
+    border-top: 1px solid black;
+    height: 500px;
+    width: 500px;
+    padding: 20px;
+}
+input[type=text] {
+    font-size: large;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  input[type=button] {
+    width: 97px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  input[type=number] {
+    font-size: large;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  #result{
+    font-size: x-large;
+    border: none;
+    color: green;
+    border-bottom: 2px solid green;
+    text-align: center;
+  }
